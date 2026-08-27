@@ -1,0 +1,171 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-bg: #0c0e0d;
+  --color-surface: #141816;
+  --color-surface-2: #1c211e;
+  --color-fg: #eceae4;
+  --color-muted: #8b948c;
+  --color-subtle: #6a736c;
+  --color-accent: #c5d0c4;
+  --color-accent-fg: #0c0e0d;
+  --color-border: rgb(236 234 228 / 0.12);
+  --color-primary: #c5d0c4;
+  --color-primary-foreground: #0c0e0d;
+  --color-ring: #c5d0c4;
+
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --radius-3xl: 32px;
+
+  --shadow-border: 0 0 0 1px rgb(236 234 228 / 0.1);
+
+  --ease-smooth-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+
+  --motion-stagger: 40ms;
+  --motion-micro: 80ms;
+  --motion-quick: 150ms;
+  --motion-fast: 250ms;
+  --motion-medium: 350ms;
+  --motion-slow: 400ms;
+  --motion-emphasis: 500ms;
+}
+
+@layer base {
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: var(--color-bg);
+    color: var(--color-fg);
+    pointer-events: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+
+  button,
+  [role="button"],
+  [role="radio"],
+  [role="slider"] {
+    pointer-events: auto;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgb(236 234 228 / 0.16);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+.grove-shell {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+}
+
+.grove-stage {
+  position: relative;
+  z-index: 0;
+  flex: 1 1 0;
+  min-height: 32%;
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+.grove-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+  touch-action: none;
+}
+
+.grove-chrome {
+  position: relative;
+  z-index: 20;
+  flex-shrink: 0;
+  pointer-events: auto;
+  transform: translateZ(0);
+}
+
+.grove-panel {
+  flex: 0 1 auto;
+  max-height: 40%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.grove-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 44px;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+  pointer-events: auto;
+  touch-action: none;
+}
+
+.grove-range::-webkit-slider-runnable-track {
+  height: 4px;
+  background: var(--color-surface-2);
+  border-radius: 999px;
+}
+
+.grove-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  margin-top: -9px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--color-fg);
+}
+
+.grove-range::-moz-range-track {
+  height: 4px;
+  background: var(--color-surface-2);
+  border-radius: 999px;
+}
+
+.grove-range::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--color-fg);
+}

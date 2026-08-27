@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Sylva",
+      "hasCanvas": true,
+      "bodyTextLen": 145,
+      "bodyTextHash": "5d4175c9036ac6ac834350bed7a005a3933c9f5f3a0b223bd8d1282e41a06425",
+      "bodyTextPrefix": "Sylva A living grove of fractal trees Shape Catalog № 20461 Spre",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/debug-now.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Sylva",
+      "hasCanvas": true,
+      "bodyTextLen": 58,
+      "bodyTextHash": "fedb8793f6dfad244c37fa5bc3ae0d35eb6078ba978b26be1aeabd9aa9fe6094",
+      "bodyTextPrefix": "Sylva A living grove of fractal trees New tree Adjust tree",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/debug-now-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/debug-now.json"
+}
